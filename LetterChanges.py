@@ -3,6 +3,7 @@ Have the function LetterChanges(str) take the str parameter being passed and mod
 
 Codebytes
 '''
+from test import test
 
 def LetterChanges(string):
     output_list = list(string)
@@ -18,22 +19,7 @@ def LetterChanges(string):
             output_list[pos] = char.upper()
 
     return ''.join(output_list)
- 
-def test(inp, out):
-    print('Testing ... ', end='')
-    if LetterChanges(inp) == out:
-        print('[Passed]')
-        return True
-    else:
-        print('[Failed]')
-        return False
 
-test('hello*3', "Ifmmp*3")
-print(LetterChanges('hello*3'))         #"Ifmmp*3"
-
-test('fun times!', "gvO Ujnft!")
-print(LetterChanges('fun times!'))      #"gvO Ujnft!"
-
+test(LetterChanges, 'hello*3', "Ifmmp*3")
+test(LetterChanges, 'fun times!', "gvO Ujnft!")
 #print(LetterChanges(input()))
-
-

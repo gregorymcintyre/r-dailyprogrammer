@@ -4,10 +4,7 @@ https://www.reddit.com/r/dailyprogrammer/comments/afxxca/20190114_challenge_372_
 Given a string containing only the characters x and y, find whether there are the same number of xs and ys.
 
 '''
-
-#input = input()
-
-#print(input)
+from test import test
 
 def balanced(input):
     x=0
@@ -18,22 +15,17 @@ def balanced(input):
             x += 1
         elif char == 'y':
             y += 1
-        else:
-            print('end')
-    #print('x = ' + str(x) + ', y = ' + str(y)) 
-    print('balanced(\"' +  input + '\") => ', end=' ')
-
+            
     if x == y:
-        print('True')
         return True
     else:
-        print('False')
         return False
 
-balanced("xxxyyy")
-balanced("yyyxxx")
-balanced("xxxyyyy")
-balanced("yyxyxxyxxyyyyxxxyxyx")
-balanced("xyxxxxyyyxyxxyxxyy")
-balanced("")
-balanced("x")
+test(balanced, "xxxyyy", True)
+test(balanced, "yyyxxx", True)
+test(balanced, "xxxyyyy", False)
+test(balanced, "yyxyxxyxxyyyyxxxyxyx", True)
+test(balanced, "xyxxxxyyyxyxxyxxyy", False)
+test(balanced, "", True)
+test(balanced, "x", False)
+

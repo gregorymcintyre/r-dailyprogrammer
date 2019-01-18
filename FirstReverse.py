@@ -4,9 +4,14 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 
 from Codebytes
 '''
+from test import test
 
 def FirstReverse(string):
     return string[::-1]
 
-print(FirstReverse(input()))
+test(FirstReverse, "Hello World and Coders", 'sredoC dna dlroW olleH')
+test(FirstReverse, "coderbyte", "etybredoc")
+test(FirstReverse, "I Love Code", "edoC evoL I")
+
+#print(FirstReverse(input()))
 
