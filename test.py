@@ -12,10 +12,11 @@ and compares result, displaying expected and actual returns if test is not passe
 def test(func, inp, out):
     print('Testing ... ', end='')
     if func(inp) == out:
-        print('[Passed]')
+        print('\x1b[6;30;42m' + '[Passed]' + '\x1b[0m')
         return True
+
     else:
-        print('[Failed]')
+        print('\x1b[6;30;41m' + '[Failed]' + '\x1b[0m')
         print('Expected: ' + str(inp) + ' => ' + str(out))
         print('Actual: ' + str(inp) + ' => ' + str(func(inp))) 
         return False
