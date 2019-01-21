@@ -13,6 +13,10 @@ def LetterCapitalize(str):
         
     return ''.join(output)
 
-test(LetterCapitalize, "hello world", "Hello World")
-test(LetterCapitalize, "i ran there", "I Ran There")
+#test(LetterCapitalize, "hello world", "Hello World")
+#test(LetterCapitalize, "i ran there", "I Ran There")
+
+test(LetterCapitalize, "Hello World", "hello world")
+test(LetterCapitalize, "I Ran There", "i ran there")
+
 #print(LetterCapitalize(input()))

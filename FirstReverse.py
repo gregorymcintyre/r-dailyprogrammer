@@ -9,9 +9,13 @@ from test import test
 def FirstReverse(string):
     return string[::-1]
 
-test(FirstReverse, "Hello World and Coders", 'sredoC dna dlroW olleH')
-test(FirstReverse, "coderbyte", "etybredoc")
-test(FirstReverse, "I Love Code", "edoC evoL I")
+#test(FirstReverse, "Hello World and Coders", 'sredoC dna dlroW olleH')
+#test(FirstReverse, "coderbyte", "etybredoc")
+#test(FirstReverse, "I Love Code", "edoC evoL I")
+
+test(FirstReverse, 'sredoC dna dlroW olleH', "Hello World and Coders")
+test(FirstReverse, "etybredoc", "coderbyte")
+test(FirstReverse, "edoC evoL I", "I Love Code")
 
 #print(FirstReverse(input()))
 

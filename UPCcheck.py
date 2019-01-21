@@ -58,8 +58,13 @@ def upc(number):
 
     return code
 
-test(upc, 4210000526, 4)
-test(upc, 3600029145, 2)
-test(upc, 12345678910, 4)
-test(upc, 1234567, 0)
+#test(upc, 4210000526, 4)
+#test(upc, 3600029145, 2)
+#test(upc, 12345678910, 4)
+#test(upc, 1234567, 0)
+
+test(upc, 4, 4210000526)
+test(upc, 2, 3600029145)
+test(upc, 4, 12345678910)
+test(upc, 0, 1234567)
 

@@ -21,11 +21,11 @@ def balanced(input):
     else:
         return False
 
-test(balanced, "xxxyyy", True)
-test(balanced, "yyyxxx", True)
-test(balanced, "xxxyyyy", False)
-test(balanced, "yyxyxxyxxyyyyxxxyxyx", True)
-test(balanced, "xyxxxxyyyxyxxyxxyy", False)
-test(balanced, "", True)
-test(balanced, "x", False)
+test(balanced, True, "xxxyyy")
+test(balanced, True, "yyyxxx")
+test(balanced, False, "xxxyyyy")
+test(balanced, True, "yyxyxxyxxyyyyxxxyxyx")
+test(balanced, False, "xyxxxxyyyxyxxyxxyy")
+test(balanced, True, "")
+test(balanced, False, "x")
 

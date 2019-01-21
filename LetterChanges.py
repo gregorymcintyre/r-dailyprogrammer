@@ -20,6 +20,10 @@ def LetterChanges(string):
 
     return ''.join(output_list)
 
-test(LetterChanges, 'hello*3', "Ifmmp*3")
-test(LetterChanges, 'fun times!', "gvO Ujnft!")
+#test(LetterChanges, 'hello*3', "Ifmmp*3")
+#test(LetterChanges, 'fun times!', "gvO Ujnft!")
+
+test(LetterChanges, "Ifmmp*3", 'hello*3')
+test(LetterChanges, "gvO Ujnft!", 'fun times!')
+
 #print(LetterChanges(input()))
