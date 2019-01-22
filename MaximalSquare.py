@@ -14,7 +14,7 @@ Hard challenges are worth 15 points and you are not timed for them.
 CodeBytes
 '''
 
-#from test import test
+from test import test
 
 def MaximalSquare(strArr):
     cache = strArr
@@ -27,11 +27,11 @@ def MaximalSquare(strArr):
     #print(max(max(cache)))
     return max(max(cache))**2
 
-print(MaximalSquare([[1,0,1,0,0],[1,0,1,1,1],[1,1,1,1,1],[1,0,0,1,0]]))
-print(MaximalSquare([[0,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]))
-print(MaximalSquare([[0,1,1,1], [1,1,0,1], [0,1,1,1]]))
+#print(MaximalSquare([[1,0,1,0,0],[1,0,1,1,1],[1,1,1,1,1],[1,0,0,1,0]]))
+#print(MaximalSquare([[0,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]))
+#print(MaximalSquare([[0,1,1,1], [1,1,0,1], [0,1,1,1]]))
 
-#test(MaximalSquare, 1, [[1,0,1,0,0],[1,0,1,1,1],[1,1,1,1,1],[1,0,0,1,0]])
-#test(MaximalSquare, 9, [[0,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]])
-#test(MaximalSquare, 1, [[0,1,1,1], [1,1,0,1], [0,1,1,1]])
+test(MaximalSquare, 4, [[1,0,1,0,0],[1,0,1,1,1],[1,1,1,1,1],[1,0,0,1,0]])
+test(MaximalSquare, 9, [[0,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]])
+test(MaximalSquare, 1, [[0,1,1,1], [1,1,0,1], [0,1,1,1]])
 
