@@ -7,9 +7,16 @@ Coderbytes
 from test import test
 
 def FirstFactorial(num):
-    for i in range(1, num):
-        num *= i
+    if num == 1:
+        return 1
+    else:
+        num *= FirstFactorial(num - 1)
     
     return num
 
-print(FirstFactorial(4))
+#print(FirstFactorial(4))
+#print(FirstFactorial(8))
+
+test(FirstFactorial, 24, 4)
+test(FirstFactorial, 40320, 8)
+
