@@ -1,3 +1,3 @@
-A repo to keep my programs created from r/DailyProgrammer
+A repo to keep my programs created from r/DailyProgrammer, CoderByte, etc
 
-programs require https://github.com/gregorymcintyre/FunctionTest.git
+programs will require https://github.com/gregorymcintyre/FunctionTest.git to run or just comment out test() code, and run with print() lined
