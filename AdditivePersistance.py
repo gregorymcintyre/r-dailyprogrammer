@@ -51,14 +51,14 @@ def AdditivePersistence(number):
             cycles += 1
             return cycles
 
-print(AdditivePersistence(13))
-print(AdditivePersistence(1234))
-print(AdditivePersistence(9876))
-print(AdditivePersistence(199))
+#print(AdditivePersistence(13))
+#print(AdditivePersistence(1234))
+#print(AdditivePersistence(9876))
+#print(AdditivePersistence(199))
 
-#test(AdditivePersistence, 1, 13)
-#test(AdditivePersistence, 2, 1234)
-#test(AdditivePersistence, 2, 9876)
-#test(AdditivePersistence, 3, 199)
+test(AdditivePersistence, 1, 13)
+test(AdditivePersistence, 2, 1234)
+test(AdditivePersistence, 2, 9876)
+test(AdditivePersistence, 3, 199)
 
 
