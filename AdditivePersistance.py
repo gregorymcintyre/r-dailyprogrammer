@@ -18,6 +18,21 @@ The really easy solution manipulates the input to convert the number to a string
 
 On some platforms and languages, if you try and find ever larger persistence values you'll quickly learn about your platform's big integer interfaces (e.g. 64 bit numbers)
 
+
+Beautiful solution - u/k3rri6or
+
+def add_persistence(n,t=1):
+    s = 0
+    while n:
+        s += n % 10
+        n //= 10
+    
+    if s >= 10:
+         t += add_persistence(s,t)
+    return t
+
+
+
 '''
 
 from test import test
