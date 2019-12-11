@@ -58,7 +58,9 @@ The simplest possibility is just to iterate and check the overall tax rate for e
 https://www.reddit.com/r/dailyprogrammer/comments/cdieag/20190715_challenge_379_easy_progressive_taxation/
 
 '''
+import sys
 
+#sys.setrecursionlimit(10000)
 
 def tax(amount):
     cap1 = 10000
@@ -81,9 +83,72 @@ def tax(amount):
     else:
         return -1
         
-    print("$" + str(amount) + " => $" + str(int(returnAmount)))
+    #print("$" + str(amount) + " => $" + str(int(returnAmount)))
     return returnAmount
     
+def overall(rate):
+    cap1 = 10000
+    cap2 = 30000
+    cap3 = 100000
+    
+    #rate1 = 0.0
+    rate2 = 0.1
+    rate3 = 0.25
+    rate4 = 0.4
+    
+    if rate >= 0.4:
+        #not a valid amount
+        return -1
+    if rate >= 0.25:
+        #Amount above 100000, this will break
+        #return binarySearch(cap3, cap3, rate)
+        return iterativeSearch(cap3, cap3, rate)
+    elif rate >= 0.1:
+        #Amount between 30000 and 100000
+        #return binarySearch(cap2, cap3//2, rate)
+        return iterativeSearch(cap2, cap3//2, rate)
+    elif rate > 0:
+        #Amount between 10000 and 30000
+        #return binarySearch(cap1, cap2//2, rate)
+        return iterativeSearch(cap1, cap2//2, rate)
+    else:
+        #Amount less than 10000
+        return cap1
+    
+def binarySearch (start, amount, rate):
+    foundRate = float("{0:.4f}".format(tax(start + amount) / (start+amount)))
+    #foundRate = tax(start + amount) / (start+amount)
+    #print(str(amount) + " => " + str(foundRate))
+    #print(str(foundRate) + " => " + str(rate))
+
+    if foundRate < rate:
+        return binarySearch(start, amount+amount//2, rate)
+    elif foundRate > rate:
+        return binarySearch(start, amount-amount//2, rate)
+    else : # foundRate ==  rate:
+        return start+amount
+    
+    
+def iterativeSearch (start, amount, rate):
+    position = start + amount
+    foundRate = 0
+    while foundRate != rate and amount >= 1:
+        foundRate = tax(start+position) / (start+position)
+        #print(foundRate)
+        
+        if foundRate < rate:
+            position = position+amount//2
+        elif foundRate > rate:
+            position = position-amount//2
+        else:
+            return start+position
+        #print(amount)
+        
+        amount = amount//2
+    return -1
+ 
+ 
+ 
 tax(0)
 tax(10000)
 tax(10009)
@@ -91,6 +156,11 @@ tax(10010)
 tax(12000)
 tax(56789)
 tax(1234567) 
-    
-    
-    
+
+print("found! " + str(overall(0.00)))    #10000 or 0
+print("found! " + str(overall(0.06)))    #25000
+print("found! " + str(overall(0.09)))    #34375
+#print(tax(34375))
+#print(tax(34379))
+print("found! " + str(overall(0.32)))    #256250
+print("found! " + str(overall(0.40)))    #no value
