@@ -80,9 +80,10 @@ def smorse(word):
         for l in letters:
             #print(l)
             if c == l:
-                #print("MATCH")
+                #print("MATCH")2
                 #print(code[letters.index(l)])
                 output += code[letters.index(l)]
+                break
     #print(output)
     return output
     

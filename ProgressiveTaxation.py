@@ -116,7 +116,7 @@ def overall(rate):
         return cap1
     
 def binarySearch (start, amount, rate):
-    foundRate = float("{0:.4f}".format(tax(start + amount) / (start+amount)))
+    foundRate = float("{0:.4f}".format(tax(start + amount) / (start+amount)))   # 
     #foundRate = tax(start + amount) / (start+amount)
     #print(str(amount) + " => " + str(foundRate))
     #print(str(foundRate) + " => " + str(rate))
@@ -160,7 +160,5 @@ tax(1234567)
 print("found! " + str(overall(0.00)))    #10000 or 0
 print("found! " + str(overall(0.06)))    #25000
 print("found! " + str(overall(0.09)))    #34375
-#print(tax(34375))
-#print(tax(34379))
 print("found! " + str(overall(0.32)))    #256250
 print("found! " + str(overall(0.40)))    #no value
