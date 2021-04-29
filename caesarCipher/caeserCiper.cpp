@@ -55,7 +55,48 @@ The average score of the letters in a string will tell you how its letter distri
 
 using namespace std;
 
+char warmup(char c, int i){
+    int output;
+
+    if((int)c >= 97)
+        output = (int(c)-97+i)%26+97;
+    else if((int)c >= 65)
+        output = (int(c)-65+i)%26+65;
+    else
+        output = c;
+    return (char)output;
+}
+
+string caesar(string c, int i){
+    string s;
+    for (int j=0 ; j < c.length() ; j++){
+        //cout << warmup(c[j], i) << endl;
+        s += warmup(c[j], i);
+    }
+    //cout << s << endl;
+    return s;
+}
+
 int main()
 {
-        cout << "Caeser Cipher" << endl;
+    cout << "Caeser Cipher\n------------------" << endl;
+    cout << "Warm Up\n------------------" << endl;
+    cout << warmup('a', 0) << endl; // => 'a'
+    cout << warmup('a', 1) << endl; // => 'b'
+    cout << warmup('a', 5) << endl; // => 'f'
+    cout << warmup('a', 26) << endl; // => 'a'
+    cout << warmup('d', 15) << endl; // => 's'
+    cout << warmup('z', 1) << endl; // => 'a'
+    cout << warmup('q', 22) << endl; // => 'm'
+
+    cout << "\nChallenge \n------------------" << endl;
+    cout << caesar("a", 1) << endl; // => "b"
+    cout << caesar("abcz", 1) << endl; // => "bcda"
+    cout << caesar("irk", 13) << endl; // => "vex"
+    cout << caesar("fusion", 6) << endl; // => "layout"
+    cout << caesar("dailyprogrammer", 6) << endl; // => "jgorevxumxgsskx"
+    cout << caesar("jgorevxumxgsskx", 20) << endl; // => "dailyprogrammer"
+
+    cout << "\nOptional bonus 1 \n------------------" << endl;
+    cout << caesar("Daily Programmer!", 6) << endl; // => "Jgore Vxumxgsskx!"
 }

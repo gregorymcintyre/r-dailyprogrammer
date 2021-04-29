@@ -74,24 +74,22 @@ def caesar(input, shift):
     return "".join(caesarList)
 
 
-#print("\nWarm Up \n------------------")
-warmup('a', 0) # => 'a'
-warmup('a', 1) # => 'b'
-warmup('a', 5) # => 'f'
-warmup('a', 26) # => 'a'
-warmup('d', 15) # => 's'
-warmup('z', 1) # => 'a'
-warmup('q', 22) # => 'm'
+print("\nWarm Up \n------------------")
+print(warmup('a', 0)) # => 'a'
+print(warmup('a', 1)) # => 'b'
+print(warmup('a', 5)) # => 'f'
+print(warmup('a', 26)) # => 'a'
+print(warmup('d', 15)) # => 's'
+print(warmup('z', 1)) # => 'a'
+print(warmup('q', 22)) # => 'm'
 
-#print("\nChallenge \n------------------")
-caesar("a", 1) # => "b"
-caesar("abcz", 1) # => "bcda"
-caesar("irk", 13) # => "vex"
-caesar("fusion", 6) # => "layout"
-caesar("dailyprogrammer", 6) # => "jgorevxumxgsskx"
-caesar("jgorevxumxgsskx", 20) # => "dailyprogrammer"
+print("\nChallenge \n------------------")
+print(caesar("a", 1)) # => "b"
+print(caesar("abcz", 1)) # => "bcda"
+print(caesar("irk", 13)) # => "vex"
+print(caesar("fusion", 6)) # => "layout"
+print(caesar("dailyprogrammer", 6)) # => "jgorevxumxgsskx"
+print(caesar("jgorevxumxgsskx", 20)) # => "dailyprogrammer"
 
 print("\nOptional bonus 1 \n------------------")
 print(caesar("Daily Programmer!", 6)) # => "Jgore Vxumxgsskx!"
-
-#print("\nOptional bonus 2 \n------------------")
